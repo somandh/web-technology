@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#headers
+		{
+			font-family: cursive;
+		}
+		fieldset
+		{
+			width: 200px;
+			color: red;
+		}
+		script {
+ 			font-size: 20px;
+ 			color: red;
+ 			font-style: italic;
+    	}
+		#heading
+		{
+			font-family: cursive;
+			font-size: 30px;
+			font-weight: bold;
+			margin-right: 50px;
+		}
+		input,textarea,select
+		{
+  			background-color: white;
+		}
+	</style>
+</head>
+<body background="form11.jpg">
+
+	<table align="center" height=600 width=370>
+		<tr>
+			<td colspan ="2" id="heading">Registration form</td>
+		</tr>
+		<tr>
+			<td id="headers">Name:</td>
+			<td><input type="text" id="name" placeholder="Enter name" name=""></td>
+		</tr>
+		<tr>
+			<td id="headers">Password:</td>
+			<td><input type="password" id="pass" placeholder="Enter password" name=""></td>
+		</tr>
+		<tr>
+			<td id="headers">Phone no:</td>
+			<td><input type="number" id="num" placeholder="Enter phone no" name=""></td>
+		</tr>
+		<tr>
+			<td id="headers">Dob:</td>
+			<td><input type="date" id="dob" placeholder="Select date" name=""></td>
+		</tr>
+		<tr>
+			<td id="headers" >Gender:</td>
+			<td>
+				Male<input type="radio"  name="r1" value="male">
+				Female<input type="radio" name="r1" value="female">
+			</td>
+		</tr>
+		<tr>
+			<td id="headers">Branch:</td>
+			<td>
+				<select id="mySelect">
+					<option value="Computers">CSE</option>
+					<option value="Electronics">ECE</option>
+					<option value="Electrical">EEE</option>
+					<option value="Mechanical">MECH</option>
+				</select>
+			</td>
+			<!-- <tr>
+				<td id="headers">Language:</td>
+				<td>
+					C<input type="checkbox" name="" value="C">
+					C++<input type="checkbox" name="" value="CPP">
+					Python<input type="checkbox" name="" value="Python">
+					Java<input type="checkbox" name="" value="Java">
+				</td>
+			</tr> -->
+			<tr>
+				<td id="headers">Address:</td>
+				<td>
+					<textarea id="text"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td id="headers">Select img:</td>
+				<td><input type="file" accept="image/*" id="imgg"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td ><input type="button" onclick="f1()" value="submit"></td>
+			</tr>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		function f1() {
+			var n = document.getElementById("name").value;
+			var p = document.getElementById("pass").value;
+		    var nu = document.getElementById("num").value;
+		    var d = document.getElementById("dob").value;
+		    var d1 = new Date(d);
+		    var g = document.querySelector('input[name = r1]:checked').value;
+		    var b = document.getElementById("mySelect").value;
+		    var t = document.getElementById("text").value;
+		    //image
+		    // var im = document.getElementById("imgg");
+		    // image.src = URL.createObjectURL(target.files[0]);
+
+		    alert("Submitted");
+			document.write("<body bgcolor='grey'><fieldset><legend align='center'><img src='pp.jpg' height='150px'></legend><br><table align=center><tr><td>","<h3>Name:","<td>","<h3>"+n,"<tr><td>","<h3>Password:","<td>","<h3>"+p,"<tr><td>","<h3>Number:","<td>","<h3>"+nu,"<tr><td>","<h3>Dob:","<td>","<h3>"+d1,"<tr><td>","<h3>Branch:","<td>","<h3>"+b,"<tr><td>","<h3>Gender:","<td>","<h3>"+g,"<tr><td>","<h3>Address:","<td>","<h3>"+t,"<tr><td>","<h3>Img:","<td>","</table>","</fieldset></body>");
+			//select
+			// var b = document.forms[0].l1;
+			// document.write("<tr><td>","Branch","<td>",b.options[b.selectedIndex].value);
+
+			//radio
+			
+  
+			// var g=document.getElementsByName("r1");
+			// for(n=0;n<g.length;n++)
+			// {
+			// 	if(g[n].checked==true)
+			// 			document.write("<table border=2 align=center><tr><td>","Gender","<td>",g[n].value);	
+			// }
+		}
+	</script>
+</body>
+</html>

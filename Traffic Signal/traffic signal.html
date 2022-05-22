@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+function dis( )
+{
+setTimeout(function( ){document.getElementById("demo").setAttribute("src","red1.jpg")},0000);
+setTimeout(function( ){document.getElementById("demo").setAttribute("src","yellow1.jpg")},3000);
+setTimeout(function( ){document.getElementById("demo").setAttribute("src","green1.jpg")},5000);
+setTimeout(function( ){dis( )},7000);
+}
+</script>
+</head>
+<body onload="dis()">
+<img src=" " id="demo">
+<h3 align="center">Developed by Akash kumar-19MH1A0513</h3>
+</body>
+</html>
